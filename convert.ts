@@ -1,12 +1,22 @@
 import { readdirSync } from 'node:fs';
 import sharp from 'sharp';
 
-for (const file of readdirSync('assets/svgs')) {
-    let fileContent = await Bun.file(`assets/svgs/${file}`).text();
+const colors = (await Bun.file('colors.json').json()) as { default: string; icons: Record<string, string> };
 
-    fileContent = fileContent.replace('<svg', '<svg style="color: #b5bac1"');
+for (const icon of readdirSync('assets/svgs/multicolored')) {
+    const fileContent = await Bun.file(`assets/svgs/multicolored/${icon}`).arrayBuffer(); // eslint-disable-line no-await-in-loop
+
+    sharp(fileContent)
+        .resize({ width: 500, height: 500, fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
+        .toFile(`assets/pngs/multicolored/${icon.replace('.svg', '.png')}`);
+}
+
+for (const icon of readdirSync('assets/svgs/single-colored')) {
+    let fileContent = await Bun.file(`assets/svgs/single-colored/${icon}`).text(); // eslint-disable-line no-await-in-loop
+
+    fileContent = fileContent.replace('<svg', `<svg style="color: hsl(${colors.icons[icon.replace('.svg', '')] ?? colors.default})"`);
 
     sharp(Buffer.from(fileContent))
-        .resize(500)
-        .toFile(`assets/pngs/${file.replace('.svg', '.png')}`);
+        .resize({ width: 500, height: 500, fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
+        .toFile(`assets/pngs/single-colored/${icon.replace('.svg', '.png')}`);
 }
