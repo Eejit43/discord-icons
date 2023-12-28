@@ -5,11 +5,14 @@
         "convert": "bun run convert.ts"
     },
     "prettier": "@eejit/prettier-config",
+    "dependencies": {
+        "sharp": "^0.33.1"
+    },
     "devDependencies": {
         "@eejit/eslint-config-typescript": "^4.1.0",
         "@eejit/prettier-config": "^2.1.2",
         "@tsconfig/recommended": "^1.0.3",
-        "@types/bun": "latest",
+        "@types/bun": "^1.0.0",
         "typescript": "^5.3.3"
     }
 }
