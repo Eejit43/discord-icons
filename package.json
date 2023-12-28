@@ -1,0 +1,10 @@
+{
+    "name": "discord-icons",
+    "type": "module",
+    "scripts": {},
+    "prettier": "@eejit/prettier-config",
+    "dependencies": {
+        "@eejit/eslint-config-typescript": "^4.1.0",
+        "@eejit/prettier-config": "^2.1.2"
+    }
+}
