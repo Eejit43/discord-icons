@@ -5,5 +5,5 @@
         "module": "NodeNext",
         "removeComments": true
     },
-    "include": ["convert.ts"]
+    "include": ["convert.ts", "colors.ts"]
 }
