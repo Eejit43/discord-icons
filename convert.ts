@@ -1,6 +1,10 @@
-import { readdirSync } from 'node:fs';
+import { mkdirSync, readdirSync, rmdirSync } from 'node:fs';
 import sharp from 'sharp';
-import colors from './colors.js';
+import { colors, overrides } from './colors.js';
+
+rmdirSync('assets/pngs', { recursive: true });
+
+for (const directory of ['assets/pngs/from-discord', 'assets/pngs/other']) mkdirSync(directory, { recursive: true });
 
 for (const icon of readdirSync('assets/svgs/other')) {
     const fileContent = await Bun.file(`assets/svgs/other/${icon}`).arrayBuffer(); // eslint-disable-line no-await-in-loop
@@ -13,7 +17,7 @@ for (const icon of readdirSync('assets/svgs/other')) {
 for (const icon of readdirSync('assets/svgs/from-discord')) {
     let fileContent = await Bun.file(`assets/svgs/from-discord/${icon}`).text(); // eslint-disable-line no-await-in-loop
 
-    const svgColor = colors[icon.replace('.svg', '')];
+    const svgColor = overrides[icon.replace('.svg', '')] ?? colors['interactive-normal'];
     if (svgColor) fileContent = fileContent.replace('<svg', `<svg style="color: hsl(${svgColor})"`);
 
     sharp(Buffer.from(fileContent))
