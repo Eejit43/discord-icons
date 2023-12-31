@@ -11,7 +11,7 @@ for (const icon of readdirSync('assets/svgs/other')) {
 
     sharp(fileContent)
         .resize({ width: 500, height: 500, fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
-        .toFile(`assets/pngs/other/${icon.replace('.svg', '.png')}`);
+        .toFile(`assets/pngs/other/${icon.replaceAll('-', '_').replace('.svg', '.png')}`);
 }
 
 for (const icon of readdirSync('assets/svgs/from-discord')) {
@@ -22,5 +22,5 @@ for (const icon of readdirSync('assets/svgs/from-discord')) {
 
     sharp(Buffer.from(fileContent))
         .resize({ width: 500, height: 500, fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
-        .toFile(`assets/pngs/from-discord/${icon.replace('.svg', '.png')}`);
+        .toFile(`assets/pngs/from-discord/${icon.replaceAll('-', '_').replace('.svg', '.png')}`);
 }
