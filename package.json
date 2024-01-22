@@ -10,9 +10,9 @@
     },
     "devDependencies": {
         "@eejit/eslint-config-typescript": "^6.0.1",
-        "@eejit/prettier-config": "^2.2.0",
+        "@eejit/prettier-config": "^2.2.2",
         "@tsconfig/recommended": "^1.0.3",
-        "@types/bun": "^1.0.1",
+        "@types/bun": "^1.0.3",
         "typescript": "^5.3.3"
     }
 }
