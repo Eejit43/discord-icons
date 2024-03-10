@@ -12,7 +12,7 @@
         "@eejit/eslint-config-typescript": "^8.2.0",
         "@eejit/prettier-config": "^2.2.3",
         "@tsconfig/recommended": "^1.0.3",
-        "bun-types": "^1.0.29",
-        "typescript": "^5.3.3"
+        "bun-types": "^1.0.30",
+        "typescript": "^5.4.2"
     }
 }
