@@ -6,13 +6,13 @@
     },
     "prettier": "@eejit/prettier-config",
     "dependencies": {
-        "sharp": "^0.33.2"
+        "sharp": "^0.33.3"
     },
     "devDependencies": {
-        "@eejit/eslint-config-typescript": "^8.3.0",
+        "@eejit/eslint-config-typescript": "^8.4.0",
         "@eejit/prettier-config": "^2.2.3",
-        "@tsconfig/recommended": "^1.0.3",
-        "bun-types": "^1.0.32",
-        "typescript": "^5.4.2"
+        "@tsconfig/recommended": "^1.0.4",
+        "bun-types": "^1.0.35",
+        "typescript": "^5.4.3"
     }
 }
