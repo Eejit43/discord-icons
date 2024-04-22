@@ -1,18 +1,20 @@
 {
-    "name": "discord-icons",
-    "type": "module",
-    "scripts": {
-        "convert": "bun run convert.ts"
-    },
-    "prettier": "@eejit/prettier-config",
-    "dependencies": {
-        "sharp": "^0.33.3"
-    },
-    "devDependencies": {
-        "@eejit/eslint-config-typescript": "^9.5.0",
-        "@eejit/prettier-config": "^2.2.3",
-        "@tsconfig/recommended": "^1.0.6",
-        "bun-types": "^1.1.4",
-        "typescript": "^5.4.5"
-    }
+  "name": "discord-icons",
+  "type": "module",
+  "scripts": {
+    "convert": "bun run convert.ts"
+  },
+  "prettier": "@eejit/prettier-config",
+  "dependencies": {
+    "sharp": "^0.33.3"
+  },
+  "devDependencies": {
+    "@eejit/eslint-config-typescript": "^9.5.0",
+    "@eejit/prettier-config": "^2.2.3",
+    "@tsconfig/recommended": "^1.0.6",
+    "bun-types": "^1.1.4",
+    "globals": "^15.0.0",
+    "typescript": "^5.4.5"
+  },
+  "packageManager": "pnpm@9.0.5"
 }
