@@ -9,11 +9,11 @@
     "sharp": "^0.33.4"
   },
   "devDependencies": {
-    "@eejit/eslint-config-typescript": "^10.2.0",
+    "@eejit/eslint-config-typescript": "^11.0.0",
     "@eejit/prettier-config": "^2.3.0",
     "@tsconfig/recommended": "^1.0.6",
-    "bun-types": "^1.1.12",
+    "bun-types": "^1.1.13",
     "typescript": "^5.4.5"
   },
-  "packageManager": "pnpm@9.2.0"
+  "packageManager": "pnpm@9.3.0"
 }
