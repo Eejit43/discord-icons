@@ -6,14 +6,14 @@
     },
     "prettier": "@eejit/prettier-config",
     "dependencies": {
-        "sharp": "^0.33.4"
+        "sharp": "^0.33.5"
     },
     "devDependencies": {
         "@eejit/eslint-config-typescript": "^13.1.0",
         "@eejit/prettier-config": "^3.0.0",
         "@tsconfig/recommended": "^1.0.7",
-        "bun-types": "^1.1.22",
+        "bun-types": "^1.1.24",
         "typescript": "^5.5.4"
     },
-    "packageManager": "pnpm@9.7.0"
+    "packageManager": "pnpm@9.7.1"
 }
