@@ -14,6 +14,5 @@
         "@tsconfig/recommended": "^1.0.7",
         "bun-types": "^1.1.27",
         "typescript": "^5.5.4"
-    },
-    "packageManager": "pnpm@9.9.0"
+    }
 }
