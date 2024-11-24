@@ -9,10 +9,10 @@
         "sharp": "^0.33.5"
     },
     "devDependencies": {
-        "@eejit/eslint-config-typescript": "^13.7.0",
+        "@eejit/eslint-config-typescript": "^13.8.0",
         "@eejit/prettier-config": "^3.2.0",
         "@tsconfig/recommended": "^1.0.8",
-        "bun-types": "^1.1.34",
-        "typescript": "^5.6.3"
+        "bun-types": "^1.1.36",
+        "typescript": "^5.7.2"
     }
 }
