@@ -9,7 +9,7 @@ for (const directory of ['assets/pngs/from-discord', 'assets/pngs/other']) mkdir
 for (const icon of readdirSync('assets/svgs/other')) {
     const fileContent = await Bun.file(`assets/svgs/other/${icon}`).arrayBuffer(); // eslint-disable-line no-await-in-loop
 
-    sharp(fileContent)
+    void sharp(fileContent)
         .resize({ width: 500, height: 500, fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
         .toFile(`assets/pngs/other/${icon.replaceAll('-', '_').replace('.svg', '.png')}`);
 }
@@ -20,7 +20,7 @@ for (const icon of readdirSync('assets/svgs/from-discord')) {
     const svgColor = overrides[icon.replace('.svg', '')] ?? colors['interactive-normal'];
     if (svgColor) fileContent = fileContent.replace('<svg', `<svg style="color: hsl(${svgColor})"`);
 
-    sharp(Buffer.from(fileContent))
+    void sharp(Buffer.from(fileContent))
         .resize({ width: 500, height: 500, fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
         .toFile(`assets/pngs/from-discord/${icon.replaceAll('-', '_').replace('.svg', '.png')}`);
 }
