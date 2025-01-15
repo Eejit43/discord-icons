@@ -11,7 +11,6 @@
     "devDependencies": {
         "@eejit/eslint-config-typescript": "^13.12.0",
         "@eejit/prettier-config": "^3.3.0",
-        "@tsconfig/recommended": "^1.0.8",
         "bun-types": "^1.1.43",
         "typescript": "^5.7.3"
     }
