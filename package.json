@@ -9,9 +9,9 @@
         "sharp": "^0.33.5"
     },
     "devDependencies": {
-        "@eejit/eslint-config-typescript": "^13.12.0",
+        "@eejit/eslint-config-typescript": "^13.13.0",
         "@eejit/prettier-config": "^3.3.0",
-        "bun-types": "^1.1.43",
+        "bun-types": "^1.1.45",
         "typescript": "^5.7.3"
     }
 }
