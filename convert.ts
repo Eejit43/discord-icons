@@ -1,8 +1,8 @@
-import { mkdirSync, readdirSync, rmdirSync } from 'node:fs';
+import { mkdirSync, readdirSync, rmSync } from 'node:fs';
 import sharp from 'sharp';
 import { colors, overrides } from './colors.js';
 
-rmdirSync('assets/pngs', { recursive: true });
+rmSync('assets/pngs', { force: true, recursive: true });
 
 for (const directory of ['assets/pngs/from-discord', 'assets/pngs/other']) mkdirSync(directory, { recursive: true });
 
